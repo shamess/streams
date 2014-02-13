@@ -35,6 +35,7 @@ abstract class SimpleStream {
 
     private function getFeedReader() {
         $feed = new \SimplePie();
+        $feed->set_cache_duration(300);
         $feed->set_feed_url($this->feedUrl);
         $feed->init();
         $feed->handle_content_type();
