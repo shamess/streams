@@ -16,6 +16,10 @@ class FlickrStream extends SimpleStream implements Stream {
         parent::__construct('http://www.flickr.com/services/feeds/photos_public.gne?id='.$userId.'&format=rss_200');
     }
 
+    protected function getItemTitle(\SimplePie_Item $item) {
+        return 'Uploaded <em>' . $item->get_title() . '</em>';
+    }
+
     protected function getStreamImage() {
         return 'images/flickr.png';
     }
