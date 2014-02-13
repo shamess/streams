@@ -1,0 +1,18 @@
+{
+    "name": "shane/streams",
+    "description": "Simple adapters for common APIs when you just want quick data",
+    "license": "Public domain",
+    "authors": [
+        {
+            "name": "Shane Preece",
+            "email": "shane@leafcanvas.com"
+        }
+    ],
+    "require": {
+        "simplepie/simplepie": "dev-master",
+        "themattharris/tmhOAuth": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"Shane\\Streams\\": "src/"}
+    }
+}
