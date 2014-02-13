@@ -49,10 +49,10 @@ class LastFmStream implements Stream {
     }
 
     private function getItemTitle(array $track) {
-        return $track['name'] . " by " . $track['artist']['#text'];
+        return '<em>' . $track['name'] . "</em> by <em>" . $track['artist']['#text'] . "</em>";
     }
 
-    private function isTrackPlayingNOw(array $track) {
+    private function isTrackPlayingNow(array $track) {
         return array_key_exists('@attr', $track) && array_key_exists('nowplaying', $track['@attr']) && $track['@attr']['nowplaying'];
     }
 }
